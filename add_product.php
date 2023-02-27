@@ -93,10 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Open the products file
         $file = fopen($products_file, "a");
         if ($file) {
-
-            $id = uniqid();
-
-            fwrite($file, "$id|$name|$price|$image\n");
+            fwrite($file, "$name|$price|$image\n");
 
             fclose($file);
 
