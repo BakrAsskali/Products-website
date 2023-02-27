@@ -83,6 +83,7 @@ if(isset($_POST['submit'])){
     if($username!='' && $password!=''){
         $fp=fopen('users.txt','a');
         fwrite($fp,$username.'|'.$password);
+        fclose($fp);
         header("Location: Login.php");
     }else{
 ?><span><?php echo "Veuillez remplir tous les plan!";?></span><?php
